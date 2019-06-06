@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="tp3_silvanaHiga.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>TP SH-MOVIE</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class='header'>
+            <div class="logo">
+                    <a href="file:///Users/silvana/Dropbox/GitHub/DOM/TP/tp3_silvanaHiga.html">
+                        <img src='iso_blanco_transparent.svg'/>
+                    </a>
+                </div>
+           
+            <div class='search'>       
+                <div class='lupa'><svg id="iconSearch" viewBox="0 0 30 30" width="100%" height="100%">
+                        <title>Search</title>
+                        <path d="M21.9140625,18.28125 C23.0859375,16.4375 23.7734375,14.25 23.7734375,11.8984375 C23.7734375,5.328125 18.453125,0 11.890625,0 C5.3203125,0 0,5.328125 0,11.8984375 C0,18.46875 5.3203125,23.796875 11.8828125,23.796875 C14.265625,23.796875 16.484375,23.09375 18.34375,21.890625 L18.8828125,21.515625 L27.3671875,30 L30,27.3203125 L21.5234375,18.8359375 L21.9140625,18.28125 Z M18.546875,5.25 C20.3203125,7.0234375 21.296875,9.3828125 21.296875,11.890625 C21.296875,14.3984375 20.3203125,16.7578125 18.546875,18.53125 C16.7734375,20.3046875 14.4140625,21.28125 11.90625,21.28125 C9.3984375,21.28125 7.0390625,20.3046875 5.265625,18.53125 C3.4921875,16.7578125 2.515625,14.3984375 2.515625,11.890625 C2.515625,9.3828125 3.4921875,7.0234375 5.265625,5.25 C7.0390625,3.4765625 9.3984375,2.5 11.90625,2.5 C14.4140625,2.5 16.7734375,3.4765625 18.546875,5.25 Z" stroke="none" fill-rule="nonzero"></path>
+                      </svg></div>
+                <input id='input' placeholder='Search for a movie...'></input>
+                <div id='hamb' ><i class="fas fa-bars"></i></div>
+            </div>    
+        </div>
+
+        <div class='main'>
+                <!-- menu ranking peliculas            -->
+            <div class='navbar' onmouseover=" " style="cursor: pointer">
+            <div class='nav popular' id='POPULAR'>
+                <div class='icon'><i class="far fa-star"></i></div>
+                <div class='info'>POPULAR</div>
+            </div>
+            <div class='nav top' id='top rated'>
+            <div class='icon'><i class="fas fa-arrow-up"></i></div>
+                <div class='info'>TOP RATED</div>
+            </div>
+            <div class='nav upcoming' id='up coming'>
+            <div class='icon'><i class="far fa-calendar-alt"></i></div>
+                <div class='info'>UP COMING</div>
+            </div>
+            <div class='nav nowplaying'id='now playing'>
+            <div class='icon'><i class="far fa-play-circle"></i></div>
+                <div class='info'>NOW PLAYING</div>
+            </div>
+        </div>
+
+        <!-- poster cuerpo principal       -->
+     
+        <div class='board'>
+                <div class='poster'>
+                    <img id='batman' src="./batman.jpg"/>
+                    <div id='nombre'> SH MOVIE</div>
+                </div>
+                
+                <!-- resultados busqueda -->
+                <div class='busqueda'>
+                            <h2 class='searchTipo'>Search Results</h2>
+                            <span class='searchTotal'>total resultado</span>
+                </div>
+
+                <!-- HOME -->
+
+                <div id='boardHome'>
+                       
+                        
+           
+
+                    <div id='pop1'>
+                        <div id='pop3'>
+                                <div id='pop2'>Popular Movies</div>
+                                <button id='pop'>view all →</button>
+                        </div>
+                        <div id='popular'>
+                        
+                        </div>
+                    </div>
+
+                    <div id='top1'>
+                        <div id='top3'>
+                                <div id='pop2'>Top Rated Movies</div>
+                                <button id='top'>view all →</button>
+                        </div>
+                        <div id='top_rated'>
+                        
+                        </div>
+                    </div>
+                    <div id='now1'>
+                        <div id='now3'>
+                                <div id='pop2'>Now Playing Movies</div>
+                                <button id='now'>view all →</button>
+                        </div>
+                        <div id='now_playing'>
+                        
+                        </div>
+                    </div> 
+                    <div id='up1'> 
+                        <div id='up3'>
+                                <div id='pop2'>Up Coming Movies</div>
+                                <button id='up'>view all →</button>
+                        </div>
+                        <div id='upcoming'>
+
+                        </div>
+                    </div> 
+                </div>
+
+            <!-- board de peliculas encontradas -->
+            
+                <div id='peliculas'>
+                       
+                    
+
+                </div>
+
+        </div>
+
+
+    </div>
+
+        <!-- boton load more -->
+        <button id='loadMore'> LOAD MORE
+        <button id='loadMoreUrl' class='displayNone'> LOAD MORE</div>
+
+     <!-- MODAL -->
+     <div id="modal"class= 'displayNone'>
+         
+            <div id='traerModal'>
+                <div class='botonDiv'><i id = 'boton' class="fas fa-times"></i></div>
+                <div class='post'><img id='p2' src=''></img></div>
+                <div class='text'>
+                    <div id='text1'></div>    
+                    <div id='text2'></div>   
+                </div>
+
+                <div class='text2'>
+                    <div id='info1'></div>
+                    <br>
+                    <span id='tipo'>GENRES</span>
+                    <div id='info2'><div id='c'></div>
+                    <br>    
+                    </div>
+                    <span id='tipo'>RELEASE DATE</span>
+                    <div id='info3'>  </div>  
+                </div>
+
+                <div class='up'><img id='b2' src=''></div>
+                <div class='down'></div>
+            </div>
+       </div>
+
+    <!-- HAMBURGUESA -->
+    <div id='burger' class='displayNone'>
+
+            <div id='menuB'>
+              
+              <div class='c'>
+                <div class='caja'><i class="far fa-star"></i><div class='info6'>POPULAR</div></div>
+                <div class='caja'><i class="fas fa-arrow-up"></i><div class='info7'>TOP RATED</div></div>
+              </div>
+              
+              <div class='c'>
+              <div class='caja'><i class="far fa-calendar-alt"></i><div class='info8'>UP COMING</div></div>
+              <div class='caja'><i class="far fa-play-circle"></i><div class='info9'>NOW PLAYING</div></div>
+              </div>
+
+            </div>
+    </div>            
+    <script src="tp3_silvanaHiga.js"></script>
+</body>
+</html>
+

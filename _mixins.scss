@@ -1,0 +1,16 @@
+@mixin opacity($opacity-value){
+    opacity: $opacity-value;
+}
+
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin center {  //con esto puedo a traves de sass mixear y hacer que todo me quede centrado
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
